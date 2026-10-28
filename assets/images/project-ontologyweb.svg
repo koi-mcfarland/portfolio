@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
+  <rect width="600" height="420" fill="#121214"/>
+  <g stroke="#3d89bd" stroke-width="2" opacity="0.6">
+    <line x1="300" y1="90" x2="180" y2="150"/>
+    <line x1="300" y1="90" x2="420" y2="140"/>
+    <line x1="300" y1="90" x2="300" y2="190"/>
+    <line x1="180" y1="150" x2="240" y2="230"/>
+    <line x1="420" y1="140" x2="380" y2="220"/>
+    <line x1="300" y1="190" x2="240" y2="230"/>
+    <line x1="300" y1="190" x2="380" y2="220"/>
+    <line x1="180" y1="150" x2="120" y2="220"/>
+    <line x1="420" y1="140" x2="490" y2="210"/>
+  </g>
+  <g fill="#33bdf5">
+    <circle cx="300" cy="90" r="14"/>
+    <circle cx="180" cy="150" r="10"/>
+    <circle cx="420" cy="140" r="10"/>
+    <circle cx="300" cy="190" r="10"/>
+    <circle cx="240" cy="230" r="8"/>
+    <circle cx="380" cy="220" r="8"/>
+    <circle cx="120" cy="220" r="8"/>
+    <circle cx="490" cy="210" r="8"/>
+  </g>
+  <text x="300" y="340" text-anchor="middle" font-family="Poppins, sans-serif" font-size="30" font-weight="600" fill="#d5d5d5">OntologyWeb</text>
+  <text x="300" y="376" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" fill="#a8a8a8">LLM-assisted ontology visualization &amp; editing</text>
+</svg>

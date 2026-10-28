@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
+  <rect width="600" height="420" fill="#121214"/>
+  <g opacity="0.9">
+    <circle cx="150" cy="80" r="10" fill="#33bdf5"/>
+    <circle cx="300" cy="60" r="10" fill="#33bdf5"/>
+    <circle cx="450" cy="90" r="10" fill="#33bdf5"/>
+    <circle cx="210" cy="120" r="10" fill="#33bdf5" opacity="0.8"/>
+    <circle cx="360" cy="115" r="10" fill="#33bdf5" opacity="0.8"/>
+    <circle cx="270" cy="160" r="10" fill="#33bdf5" opacity="0.7"/>
+    <circle cx="420" cy="165" r="10" fill="#33bdf5" opacity="0.7"/>
+    <circle cx="180" cy="195" r="10" fill="#33bdf5" opacity="0.6"/>
+    <circle cx="330" cy="210" r="10" fill="#33bdf5" opacity="0.6"/>
+    <circle cx="250" cy="245" r="10" fill="#33bdf5" opacity="0.5"/>
+    <circle cx="390" cy="240" r="10" fill="#33bdf5" opacity="0.5"/>
+  </g>
+  <text x="300" y="340" text-anchor="middle" font-family="Poppins, sans-serif" font-size="30" font-weight="600" fill="#d5d5d5">Falling Sand Simulation</text>
+  <text x="300" y="376" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" fill="#a8a8a8">Real-time cellular automata in C++ &amp; SDL2</text>
+</svg>

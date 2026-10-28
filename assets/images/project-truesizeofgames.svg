@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
+  <rect width="600" height="420" fill="#121214"/>
+  <circle cx="300" cy="180" r="110" fill="none" stroke="#3d89bd" stroke-width="3"/>
+  <path d="M300 70 a110 110 0 0 1 0 220 a110 110 0 0 1 0 -220 M190 180 h220 M300 70 c-40 55 -40 165 0 220 c40 -55 40 -165 0 -220" fill="none" stroke="#3d89bd" stroke-width="2" opacity="0.6"/>
+  <path d="M225 120 q30 20 15 55 q-25 -5 -30 -30 q-2 -15 15 -25 z" fill="#33bdf5" opacity="0.75"/>
+  <path d="M330 190 q45 10 50 55 q-30 25 -60 0 q-15 -40 10 -55 z" fill="#33bdf5" opacity="0.55"/>
+  <path d="M360 110 l30 18 -8 32 h-34 l-8 -32 z" fill="#33bdf5" opacity="0.45"/>
+  <text x="300" y="340" text-anchor="middle" font-family="Poppins, sans-serif" font-size="30" font-weight="600" fill="#d5d5d5">TrueSizeOfGames</text>
+  <text x="300" y="376" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" fill="#a8a8a8">Video game maps vs. real geography</text>
+</svg>
