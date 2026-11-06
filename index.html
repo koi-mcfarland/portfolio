@@ -808,7 +808,7 @@
                 syntactically valid, read-only Elasticsearch query, while preserving the precision and safety that
                 operational query execution demands. <a
                 href="./assets/pdf/Research-Question-And-Hypothesis.pdf" target="_blank" rel="noopener">The
-                hypothesis</a>: an F1 score of at least 0.95 against a pre-tagged dataset of failed-login and
+                hypothesis</a>: an F<sub>1</sub> score of at least 0.95 against a pre-tagged dataset of failed-login and
                 lateral-movement events.
               </p>
 
@@ -861,11 +861,11 @@
               <p>
                 Metrics were computed by comparing UUIDs returned by each CAI query against the PI-Key, so every
                 error is attributable to the system's intent interpretation rather than dataset ambiguity.
-                <strong>Failed-login detection</strong> reached F1 up to 0.9981, <strong>suspicious/foreign IP
-                activity</strong> scored 0.9775, and <strong>linguistic robustness</strong> averaged F1 0.9821
+                <strong>Failed-login detection</strong> reached F<sub>1</sub> up to 0.9981, <strong>suspicious/foreign IP
+                activity</strong> scored 0.9775, and <strong>linguistic robustness</strong> averaged F<sub>1</sub> 0.9821
                 across five paraphrases of the same question, all meeting the ≥ 0.95 hypothesis benchmark.
                 <strong>Lateral movement</strong> was the weakest task: an initial run had perfect recall but 5,068
-                false positives (F1 0.5858), improving to 0.9408 after prompt refinement, a documented
+                false positives (F<sub>1</sub> 0.5858), improving to 0.9408 after prompt refinement, a documented
                 architectural limitation of single static queries encoding sequence behavior, not an
                 implementation error. Across all runs every executed query was valid, read-only DSL, and the system
                 was assessed at Technology Readiness Level 4. All results follow the six test cases of the
