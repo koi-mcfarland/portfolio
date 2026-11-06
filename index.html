@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Koi McFarland - Personal Portfolio</title>
-  <meta name="description" content="Portfolio of Koi McFarland — Computer Science Engineer, self-taught programmer, and AI trainer based in Charleston, South Carolina.">
+  <meta name="description" content="Portfolio of Koi McFarland - Computer Science Engineer, self-taught programmer, and AI trainer based in Charleston, South Carolina.">
 
   <!--
     - favicon
@@ -173,10 +173,6 @@
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
         </ul>
 
       </nav>
@@ -204,8 +200,8 @@
 
           <p>
             After 11 years of self-taught learning, including proficiency before the AI revolution, my work encompasses C++, Java, and Python, with additional experience in C, C#, Rust, JavaScript, and AI
-            development. My hands-on work spans full-stack development, database management, Linux systems, and
-            game/simulation development with Unity, Godot, and Unreal Engine 5. I've competed in ICPC/CCPC programming
+            development. My hands-on work spans full-stack development, database management, Linux and NixOS systems,
+            and game/simulation development with Unity, Godot, and Unreal Engine 5. I've competed in ICPC/CCPC programming
             contests, interned in cybersecurity R&D at NIWC, and co-authored an IEEE RE 2026 paper on LLM-assisted
             software requirements visualization.
           </p>
@@ -280,7 +276,7 @@
                 <h4 class="h4 service-item-title">Full-stack web development</h4>
 
                 <p class="service-item-text">
-                  Responsive sites, PWAs, and data-driven web apps — optimized, accessible, and deployed end to end.
+                  Responsive sites, PWAs, and data-driven web apps, optimized, accessible, and deployed end to end.
                 </p>
               </div>
 
@@ -304,10 +300,6 @@
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
-
-          <p class="resume-download">
-            <a href="./assets/pdf/resume.pdf" target="_blank" rel="noopener">Download full resume (PDF)</a>
-          </p>
         </header>
 
         <section class="timeline">
@@ -329,8 +321,8 @@
               <span>Class of 2026</span>
 
               <p class="timeline-text">
-                B.S. in Computer Science and Engineering, Minor in Mathematics — GPA 3.9/4.0. Dean's List (2023, 2024,
-                2025), member of the Alpha Chi National College Honor Society, and recipient of the CSU Jairy C. Hunter
+                B.S. in Computer Science and Engineering, Minor in Mathematics - GPA 3.9/4.0. Dean's List (2023, 2024,
+                2025, 2026), member of the Alpha Chi National College Honor Society, and recipient of the CSU Jairy C. Hunter
                 and SC LIFE scholarships.
               </p>
 
@@ -357,7 +349,7 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <ion-icon name="briefcase-outline"></ion-icon>
             </div>
 
             <h3 class="h3">Experience</h3>
@@ -367,9 +359,9 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Software Developer — AI Trainer (Contract), DataAnnotation</h4>
+              <h4 class="h4 timeline-item-title">Software Developer - AI Trainer (Contract), DataAnnotation</h4>
 
-              <span>Apr. 2024 — Present</span>
+              <span>Apr. 2024 - Present</span>
 
               <p class="timeline-text">
                 Trains AI coding abilities by examining, scrutinizing, and rewriting generated code, grading model
@@ -382,7 +374,7 @@
 
               <h4 class="h4 timeline-item-title">ACE Cyber R&D Intern, NIWC / Core4ce</h4>
 
-              <span>Aug. 2025 — Dec. 2025</span>
+              <span>Aug. 2025 - Dec. 2025</span>
 
               <p class="timeline-text">
                 Conducted research and authored a white paper for NIWC. Designed and implemented a conversational AI
@@ -394,7 +386,7 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Undergraduate Researcher — OntologyWeb</h4>
+              <h4 class="h4 timeline-item-title">Undergraduate Researcher - OntologyWeb</h4>
 
               <span>IEEE RE 2026</span>
 
@@ -473,6 +465,20 @@
         <!---->
         <!-- </section> -->
 
+        <div class="resume-download">
+          <a href="./assets/pdf/resume.pdf" class="resume-btn" target="_blank" rel="noopener">
+            <ion-icon name="document-outline"></ion-icon>
+
+            <span>Resume (1 page)</span>
+          </a>
+
+          <a href="./assets/pdf/resume-full.pdf" class="resume-btn" target="_blank" rel="noopener">
+            <ion-icon name="documents-outline"></ion-icon>
+
+            <span>Resume (2 pages)</span>
+          </a>
+        </div>
+
       </article>
 
 
@@ -486,10 +492,14 @@
       <article class="portfolio" data-page="portfolio">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <button class="h2 article-title portfolio-back" data-details-back>
+            <ion-icon name="arrow-back-outline"></ion-icon>
+
+            <span>Portfolio</span>
+          </button>
         </header>
 
-        <section class="projects">
+        <section class="projects" data-projects>
 
           <ul class="filter-list">
 
@@ -548,14 +558,14 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://www.truesizeofgames.com" target="_blank" rel="noopener">
+              <a href="#" data-project-btn data-project="truesizeofgames">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-truesizeofgames.svg" alt="TrueSizeOfGames" loading="lazy">
+                  <img src="./assets/images/project-truesizeofgames.png" alt="TrueSizeOfGames" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">TrueSizeOfGames</h3>
@@ -566,14 +576,14 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="game development">
-              <a href="https://github.com/koi-mcfarland/Falling-Sand-Simulation" target="_blank" rel="noopener">
+              <a href="#" data-project-btn data-project="falling-sand">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-fallingsand.svg" alt="Falling Sand Simulation" loading="lazy">
+                  <img src="./assets/images/project-fallingsand.png" alt="Falling Sand Simulation" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Falling Sand Simulation</h3>
@@ -584,17 +594,35 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="ai development">
-              <a href="https://github.com/songhui01/OntologyWeb" target="_blank" rel="noopener">
+              <a href="#" data-project-btn data-project="ontologyweb">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-ontologyweb.svg" alt="OntologyWeb" loading="lazy">
+                  <img src="./assets/images/project-ontologyweb.png" alt="OntologyWeb" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">OntologyWeb</h3>
+
+                <p class="project-category">AI development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ai development">
+              <a href="#" data-project-btn data-project="senior-project">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-seniorproject.png" alt="Conversational AI Interface" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Conversational AI Interface</h3>
 
                 <p class="project-category">AI development</p>
 
@@ -605,50 +633,309 @@
 
         </section>
 
-      </article>
+        <section class="project-details" data-details>
 
+          <div class="detail-content" data-detail="truesizeofgames">
 
+            <figure class="detail-img">
+              <img src="./assets/images/project-truesizeofgames.png" alt="TrueSizeOfGames">
+            </figure>
 
+            <h3 class="detail-title">TrueSizeOfGames</h3>
 
+            <p class="detail-category">Web development</p>
 
-      <!--
-        - #CONTACT
-      -->
+            <div class="detail-text">
+              <p>
+                <a href="https://www.truesizeofgames.com" target="_blank" rel="noopener">TrueSizeOfGames.com</a> is
+                an interactive website that lets you compare the map sizes of video games to any location on Earth. It
+                contains a full world map, so you can overlay a game's map on top of your own hometown, find your real
+                location with a single click, and see just how vast (or tiny) a game world really is.
+              </p>
 
-      <article class="contact" data-page="contact">
+              <p>
+                Maps can be dragged anywhere, and tapping a map reveals its area and controls for color, transparency,
+                rotation, and removal. A search bar makes it easy to find and overlay new maps, and if a game isn't
+                listed yet, users can upload a custom map image and resize and position it however they like.
+              </p>
 
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="contact-form">
-
-          <p class="contact-note">
-            The fastest way to reach me is by email at
-            <a href="mailto:koi.mcfarland@proton.me">koi.mcfarland@proton.me</a>.
-            Submitting this form opens a pre-filled email in your mail client.
-          </p>
-
-          <form action="mailto:koi.mcfarland@proton.me" method="post" enctype="text/plain" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <p>
+                I am the solo developer of this website, and built it end to end from the interactive map UI and
+                search system to the hosting and deployment.
+              </p>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <div class="detail-links">
+              <a href="https://www.truesizeofgames.com" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="globe-outline"></ion-icon>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+                <span>Website</span>
+              </a>
+            </div>
 
-          </form>
+          </div>
+
+          <div class="detail-content" data-detail="falling-sand">
+
+            <figure class="detail-img">
+              <img src="./assets/images/project-fallingsand.png" alt="Falling Sand Simulation">
+            </figure>
+
+            <h3 class="detail-title">Falling Sand Simulation</h3>
+
+            <p class="detail-category">Game development</p>
+
+            <div class="detail-text">
+              <p>
+                A real-time falling-sand particle simulation built with C++17 and SDL2. Instead of rigid bodies and
+                collision meshes, matter is represented as individual particles in a 2D cellular matrix, each one belongs
+                to an element type and follows its own simple rules, and the emergent behavior of thousands of
+                particles interacting produces natural-looking sand, water, fire, and smoke physics.
+              </p>
+
+              <p>
+                The simulation includes over a dozen element types: sand, dirt, coal, and salt fall and pile up (salt
+                dissolves in water), stone and wood form static structures, water and oil flow and spread, and smoke
+                and steam rise. Every element is implemented as a subclass of a polymorphic base
+                <code>Element</code> class, so new materials can be added with their own update behavior without
+                touching the rest of the engine.
+              </p>
+
+              <p>
+                Under the hood, physics runs on a fixed 120&nbsp;Hz timestep with a bottom-up update order so gravity
+                behaves correctly, randomized column ordering to prevent directional bias, and hardware-accelerated
+                SDL2 texture rendering for smooth performance even with a screen full of particles. Left-click paints
+                the selected element, right-click erases, and the mouse wheel adjusts the brush size.
+              </p>
+
+              <p>
+                Built with: C++17 · SDL2 · SDL2_image · SDL2_ttf · Make.
+              </p>
+            </div>
+
+            <div class="detail-links">
+              <a href="https://github.com/koi-mcfarland/Falling-Sand-Simulation" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="logo-github"></ion-icon>
+
+                <span>GitHub</span>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="detail-content" data-detail="ontologyweb">
+
+            <figure class="detail-img">
+              <img src="./assets/images/project-ontologyweb.png" alt="OntologyWeb">
+            </figure>
+
+            <h3 class="detail-title">OntologyWeb</h3>
+
+            <p class="detail-category">AI development</p>
+
+            <div class="detail-text">
+              <p>
+                OntologyWeb is an LLM-assisted workflow for visualizing structural differences in evolving software
+                requirements. It is the prototype behind my co-authored paper, <em>“LLM-Assisted Workflow for
+                Structural Difference Visualization in Evolving Software Requirements”</em>, accepted as a Poster &amp;
+                Tool Demo at the 2026 IEEE 34th International Requirements Engineering Conference (RE 2026).
+              </p>
+
+              <p>
+                Requirements modeled as ontologies are difficult to compare across versions as they grow. OntologyWeb
+                takes RDF requirements ontologies, renders them as interactive graphs, and highlights the structural
+                differences between evolving versions, using a large language model to assist with the requirements
+                modeling and comparison work.
+              </p>
+
+              <p>
+                The prototype is built in Python with Dash and dash-cytoscape for the interactive graph visualizations
+                and rdflib for RDF parsing, and runs entirely locally: the LLM runs through Ollama, so no cloud
+                services or external APIs are required.
+              </p>
+
+              <p>
+                Built with: Python · Dash · dash-cytoscape · rdflib · Ollama.
+              </p>
+            </div>
+
+            <div class="detail-links">
+              <a href="https://github.com/songhui01/OntologyWeb" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="logo-github"></ion-icon>
+
+                <span>GitHub</span>
+              </a>
+
+              <a href="./assets/pdf/re2026-ontologyweb-paper.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="document-text-outline"></ion-icon>
+
+                <span>Paper (PDF)</span>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="detail-content" data-detail="senior-project">
+
+            <figure class="detail-img">
+              <img src="./assets/images/project-seniorproject.png" alt="Conversational AI Interface">
+            </figure>
+
+            <h3 class="detail-title">Conversational AI Interface for Analyst-Driven Threat Investigation</h3>
+
+            <p class="detail-category">AI development · Senior Capstone (CSCI 497–498–499) / NIWC ACE Research</p>
+
+            <div class="detail-text">
+              <p>
+                My <a href="./assets/pdf/Project-Charter.pdf" target="_blank" rel="noopener">senior capstone
+                project</a>, conducted as
+                <a href="./assets/pdf/Final-Whitepaper.pdf" target="_blank" rel="noopener">research with the Naval
+                Information Warfare Center via the DoD/ACE program</a> and completed in December 2025. Modern Security
+                Operations Centers (SOCs) generate vast volumes of log data, and analysts must translate their
+                investigative intent into precise queries written in Elasticsearch's JSON Domain-Specific Language
+                (DSL), a step that wastes analyst time, creates training bottlenecks for new hires, and makes results
+                inconsistent across teams. The work built upon prior research in explainable AI, human–AI collaboration
+                in SOC environments, and Elasticsearch-based threat detection (see the
+                <a href="./assets/pdf/Preliminary-Literature-Map.pdf" target="_blank" rel="noopener">preliminary
+                literature map</a>).
+              </p>
+
+              <p>
+                This project <a href="./assets/pdf/Project-Research-Design.pdf" target="_blank"
+                rel="noopener">investigated</a> whether a <strong>Conversational AI Interface (CAI)</strong> can serve
+                as an effective, controlled intermediary between analysts and Elasticsearch: the analyst types a
+                free-form threat-hunting question in natural language, and the system translates it into exactly one
+                syntactically valid, read-only Elasticsearch query, while preserving the precision and safety that
+                operational query execution demands. <a
+                href="./assets/pdf/Research-Question-And-Hypothesis.pdf" target="_blank" rel="noopener">The
+                hypothesis</a>: an F1 score of at least 0.95 against a pre-tagged dataset of failed-login and
+                lateral-movement events.
+              </p>
+
+              <h4>Architecture</h4>
+              <p>
+                The implemented system is three coordinated services. A Python <strong>SOC log generator</strong>
+                writes ECS-compliant NDJSON events mixing benign operational activity with deliberately injected
+                adversarial behaviors, brute-force failed logins, foreign/suspicious IP access, and multi-step
+                lateral-movement chains (SSH/RDP/SMB), where every event gets a globally unique UUID and its true
+                label is recorded in a separate reference file (the <strong><a
+                href="./assets/pdf/Data-Acquisition-Report.pdf" target="_blank" rel="noopener">PI-Key</a></strong>)
+                that provides exact,
+                error-free ground truth. <strong>Filebeat</strong> ships the logs on a cron schedule into
+                date-partitioned indices (<code>soc-logs-YYYY.MM.DD</code>) on an <strong>Elasticsearch / Kibana
+                9.1.5</strong> cluster hosted with Elastic Cloud Enterprise. The <strong>CAI</strong> itself is a
+                Streamlit application whose rule-guided prompt template sends the analyst's input to a locally hosted
+                Mistral 7B LLM (via Ollama) to produce the JSON DSL query.
+              </p>
+
+              <figure class="detail-shot">
+                <img src="./assets/images/cai-home.png" alt="The CAI home screen" loading="lazy">
+
+                <figcaption>Fig 1. The CAI home screen (Streamlit) where an analyst enters a natural-language query.</figcaption>
+              </figure>
+
+              <figure class="detail-shot">
+                <img src="./assets/images/cai-generated-query.png" alt="The CAI displaying the generated Elasticsearch JSON DSL" loading="lazy">
+
+                <figcaption>Fig 2. The CAI displaying the generated Elasticsearch JSON DSL for an analyst query.</figcaption>
+              </figure>
+
+              <p>
+                Safety was a first-class requirement: a validation layer rejects malformed JSON, unknown fields, and
+                unsafe constructs such as <code>match_all</code> scans or unbounded result sizes; queries may only
+                reference known ECS fields with explicit time ranges; time expressions like "past 24 hours" are
+                resolved deterministically by a timestamp resolver rather than trusting the model; and ambiguous
+                inputs trigger a clarification request instead of a speculative query. Results are returned raw,
+                with no automated interpretation, the analyst stays in authority. The testbed ran on
+                <a href="./assets/pdf/Testbed-Setup-Configuration-Plan.pdf" target="_blank" rel="noopener">AWS EC2
+                instances in a dedicated VPC</a> across RHEL 8.10 and Ubuntu 22.04 nodes.
+              </p>
+
+              <figure class="detail-shot">
+                <img src="./assets/images/cai-results.png" alt="Query results returned to the analyst" loading="lazy">
+
+                <figcaption>Fig 3. Query results returned to the analyst, with the raw events presented for review.</figcaption>
+              </figure>
+
+              <h4>Results</h4>
+              <p>
+                Metrics were computed by comparing UUIDs returned by each CAI query against the PI-Key, so every
+                error is attributable to the system's intent interpretation rather than dataset ambiguity.
+                <strong>Failed-login detection</strong> reached F1 up to 0.9981, <strong>suspicious/foreign IP
+                activity</strong> scored 0.9775, and <strong>linguistic robustness</strong> averaged F1 0.9821
+                across five paraphrases of the same question, all meeting the ≥ 0.95 hypothesis benchmark.
+                <strong>Lateral movement</strong> was the weakest task: an initial run had perfect recall but 5,068
+                false positives (F1 0.5858), improving to 0.9408 after prompt refinement, a documented
+                architectural limitation of single static queries encoding sequence behavior, not an
+                implementation error. Across all runs every executed query was valid, read-only DSL, and the system
+                was assessed at Technology Readiness Level 4. All results follow the six test cases of the
+                <a href="./assets/pdf/Project-Test-Plan.pdf" target="_blank" rel="noopener">project test plan
+                (PTP-001)</a>, with raw run evidence and hashes recorded in the
+                <a href="./assets/pdf/Project-Research-Notebook.pdf" target="_blank" rel="noopener">project research
+                notebook</a>.
+              </p>
+
+              <h4>Challenges overcome</h4>
+              <p>
+                Early failures were Elasticsearch schema technicalities, querying <code>country_iso_code</code>
+                instead of the required <code>.keyword</code> subfield, or misplacing the time <code>range</code>
+                clause outside <code>bool.filter</code>, solved by turning field-placement rules into hard prompt
+                constraints. Lateral-movement over-selection was reduced from 5,068 false positives down to 8 using
+                worked examples in the prompt and foreign-IP filtering. Because real SOC telemetry cannot be
+                objectively labeled, deterministic ground truth was achieved with fully synthetic logs validated
+                against canonical reference queries.
+              </p>
+
+              <h4>Future enhancements</h4>
+              <p>
+                Future work would include exposing the live index mapping to the CAI with a structured execution
+                feedback loop for self-correction, correlation-aware multi-query plans (EQL sequences or
+                post-retrieval reasoning) for multi-stage behaviors, analyst-in-the-loop studies toward TRL-5/6,
+                and expanded threat coverage such as persistence, exfiltration, and privilege escalation.
+              </p>
+
+              <p>
+                Source code, testbed configuration, and raw run data are in the project repository, which is private
+                due to a non-disclosure agreement (NDA). Built with: Python 3.11 · Streamlit · Ollama (Mistral 7B) ·
+                Elasticsearch/Kibana 9.1.5 (ECE) · Filebeat · Faker · AWS EC2.
+              </p>
+            </div>
+
+            <div class="detail-links">
+              <a href="https://github.com/koi-mcfarland/Senior-Project" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="logo-github"></ion-icon>
+
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://www.youtube.com/watch?v=jT4mfJPEbIQ" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="logo-youtube"></ion-icon>
+
+                <span>Demo Video</span>
+
+              </a>
+
+              <a href="./assets/pdf/defense-slides.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="file-tray-full-outline"></ion-icon>
+
+                <span>Defense Slides (PDF)</span>
+              </a>
+            </div>
+
+            <p class="detail-note">
+              The source repository is <strong>private due to a non-disclosure agreement</strong>
+            </p>
+
+          </div>
 
         </section>
 
       </article>
+
+
+
+
+
 
     </div>
 

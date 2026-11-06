@@ -76,24 +76,52 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+// project details variables
+const projectsSection = document.querySelector("[data-projects]");
+const detailsSection = document.querySelector("[data-details]");
+const detailContents = document.querySelectorAll("[data-detail]");
+const detailsBackBtn = document.querySelector("[data-details-back]");
+const projectBtns = document.querySelectorAll("[data-project-btn]");
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+// show a project's description (replaces the filter/project list)
+const showProjectDetails = function (slug) {
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
+  for (let i = 0; i < detailContents.length; i++) {
+    detailContents[i].classList.toggle("active", detailContents[i].dataset.detail === slug);
+  }
+
+  projectsSection.classList.add("hidden");
+  detailsSection.classList.add("active");
+  detailsBackBtn.classList.add("back-enabled");
+  window.scrollTo(0, 0);
+
+}
+
+// go back to the project list (keeps the current filter selection)
+const hideProjectDetails = function () {
+
+  projectsSection.classList.remove("hidden");
+  detailsSection.classList.remove("active");
+  detailsBackBtn.classList.remove("back-enabled");
+
+}
+
+// add event in all project items
+for (let i = 0; i < projectBtns.length; i++) {
+
+  projectBtns[i].addEventListener("click", function (e) {
+
+    e.preventDefault();
+    showProjectDetails(this.dataset.project);
 
   });
+
 }
+
+// the portfolio header acts as the back button
+detailsBackBtn.addEventListener("click", function () {
+  if (detailsSection.classList.contains("active")) hideProjectDetails();
+});
 
 
 
@@ -104,6 +132,8 @@ const pages = document.querySelectorAll("[data-page]");
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
+
+    hideProjectDetails();
 
     for (let i = 0; i < pages.length; i++) {
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
