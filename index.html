@@ -185,7 +185,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about  active" data-page="about" id="About">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -296,7 +296,7 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <article class="resume" data-page="resume" id="Resume">
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
@@ -489,7 +489,7 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio" data-page="portfolio" id="Portfolio">
 
         <header>
           <button class="h2 article-title portfolio-back" data-details-back>
@@ -558,7 +558,7 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#" data-project-btn data-project="truesizeofgames">
+              <a href="#TrueSizeOfGames" data-project-btn data-project="truesizeofgames">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -576,7 +576,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="game development">
-              <a href="#" data-project-btn data-project="falling-sand">
+              <a href="#FallingSand" data-project-btn data-project="falling-sand">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -594,7 +594,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="ai development">
-              <a href="#" data-project-btn data-project="ontologyweb">
+              <a href="#OntologyWeb" data-project-btn data-project="ontologyweb">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -612,7 +612,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="ai development">
-              <a href="#" data-project-btn data-project="senior-project">
+              <a href="#SeniorProject" data-project-btn data-project="senior-project">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -635,7 +635,7 @@
 
         <section class="project-details" data-details>
 
-          <div class="detail-content" data-detail="truesizeofgames">
+          <div class="detail-content" data-detail="truesizeofgames" id="TrueSizeOfGames">
 
             <figure class="detail-img">
               <img src="./assets/images/project-truesizeofgames.png" alt="TrueSizeOfGames">
@@ -675,7 +675,7 @@
 
           </div>
 
-          <div class="detail-content" data-detail="falling-sand">
+          <div class="detail-content" data-detail="falling-sand" id="FallingSand">
 
             <figure class="detail-img">
               <img src="./assets/images/project-fallingsand.png" alt="Falling Sand Simulation">
@@ -723,7 +723,7 @@
 
           </div>
 
-          <div class="detail-content" data-detail="ontologyweb">
+          <div class="detail-content" data-detail="ontologyweb" id="OntologyWeb">
 
             <figure class="detail-img">
               <img src="./assets/images/project-ontologyweb.png" alt="OntologyWeb">
@@ -775,7 +775,7 @@
 
           </div>
 
-          <div class="detail-content" data-detail="senior-project">
+          <div class="detail-content" data-detail="senior-project" id="SeniorProject">
 
             <figure class="detail-img">
               <img src="./assets/images/project-seniorproject.png" alt="Conversational AI Interface">
@@ -783,14 +783,14 @@
 
             <h3 class="detail-title">Conversational AI Interface for Analyst-Driven Threat Investigation</h3>
 
-            <p class="detail-category">AI development · Senior Capstone (CSCI 497–498–499) / NIWC ACE Research</p>
+            <p class="detail-category">AI development · Senior Project (CSCI 497–498–499) / NIWC ACE Research</p>
 
             <div class="detail-text">
               <p>
-                My <a href="./assets/pdf/Project-Charter.pdf" target="_blank" rel="noopener">senior capstone
+                My <a href="./assets/pdf/Project-Charter.pdf" target="_blank" rel="noopener">senior 
                 project</a>, conducted as
                 <a href="./assets/pdf/Final-Whitepaper.pdf" target="_blank" rel="noopener">research with the Naval
-                Information Warfare Center via the DoD/ACE program</a> and completed in December 2025. Modern Security
+                Information Warfare Center via the DoD/ACE program</a> was completed in December 2025. Modern Security
                 Operations Centers (SOCs) generate vast volumes of log data, and analysts must translate their
                 investigative intent into precise queries written in Elasticsearch's JSON Domain-Specific Language
                 (DSL), a step that wastes analyst time, creates training bottlenecks for new hires, and makes results
@@ -902,11 +902,6 @@
             </div>
 
             <div class="detail-links">
-              <a href="https://github.com/koi-mcfarland/Senior-Project" class="detail-link" target="_blank" rel="noopener">
-                <ion-icon name="logo-github"></ion-icon>
-
-                <span>GitHub</span>
-              </a>
 
               <a href="https://www.youtube.com/watch?v=jT4mfJPEbIQ" class="detail-link" target="_blank" rel="noopener">
                 <ion-icon name="logo-youtube"></ion-icon>
@@ -919,6 +914,60 @@
                 <ion-icon name="file-tray-full-outline"></ion-icon>
 
                 <span>Defense Slides (PDF)</span>
+              </a>
+
+              <a href="./assets/pdf/Project-Charter.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="document-text-outline"></ion-icon>
+
+                <span>Project Charter (PDF)</span>
+              </a>
+
+              <a href="./assets/pdf/Final-Whitepaper.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="document-text-outline"></ion-icon>
+
+                <span>Final Whitepaper (PDF)</span>
+              </a>
+
+              <a href="./assets/pdf/Preliminary-Literature-Map.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="document-text-outline"></ion-icon>
+
+                <span>Literature Map (PDF)</span>
+              </a>
+
+              <a href="./assets/pdf/Project-Research-Design.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="document-text-outline"></ion-icon>
+
+                <span>Research Design (PDF)</span>
+              </a>
+
+              <a href="./assets/pdf/Research-Question-And-Hypothesis.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="document-text-outline"></ion-icon>
+
+                <span>Research Question &amp; Hypothesis (PDF)</span>
+              </a>
+
+              <a href="./assets/pdf/Data-Acquisition-Report.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="document-text-outline"></ion-icon>
+
+                <span>Data Acquisition Report (PDF)</span>
+              </a>
+
+              <a href="./assets/pdf/Testbed-Setup-Configuration-Plan.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="document-text-outline"></ion-icon>
+
+                <span>Testbed Setup Plan (PDF)</span>
+              </a>
+
+              <a href="./assets/pdf/Project-Test-Plan.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="document-text-outline"></ion-icon>
+
+                <span>Project Test Plan (PDF)</span>
+              </a>
+
+              <a href="./assets/pdf/Project-Research-Notebook.pdf" class="detail-link" target="_blank" rel="noopener">
+                <ion-icon name="document-text-outline"></ion-icon>
+
+                <span>Research Notebook (PDF)</span>
               </a>
             </div>
 

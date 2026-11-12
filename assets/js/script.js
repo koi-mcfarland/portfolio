@@ -81,7 +81,6 @@ const projectsSection = document.querySelector("[data-projects]");
 const detailsSection = document.querySelector("[data-details]");
 const detailContents = document.querySelectorAll("[data-detail]");
 const detailsBackBtn = document.querySelector("[data-details-back]");
-const projectBtns = document.querySelectorAll("[data-project-btn]");
 
 // show a project's description (replaces the filter/project list)
 const showProjectDetails = function (slug) {
@@ -106,21 +105,9 @@ const hideProjectDetails = function () {
 
 }
 
-// add event in all project items
-for (let i = 0; i < projectBtns.length; i++) {
-
-  projectBtns[i].addEventListener("click", function (e) {
-
-    e.preventDefault();
-    showProjectDetails(this.dataset.project);
-
-  });
-
-}
-
-// the portfolio header acts as the back button
+// the portfolio header acts as the back button, project items navigate through the URL hash
 detailsBackBtn.addEventListener("click", function () {
-  if (detailsSection.classList.contains("active")) hideProjectDetails();
+  if (detailsSection.classList.contains("active")) location.hash = "Portfolio";
 });
 
 
@@ -129,22 +116,73 @@ detailsBackBtn.addEventListener("click", function () {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
+// hash routing, resolves tags like #About, #Resume, #Portfolio, #TrueSizeOfGames
+const normalizeTag = function (tag) {
+  return tag.toLowerCase().replace(/[^a-z0-9]/g, "");
+};
+
+const findPageByTag = function (tag) {
+
+  const normalized = normalizeTag(tag);
+
+  for (let i = 0; i < pages.length; i++) {
+    if (normalized === normalizeTag(pages[i].dataset.page) || normalized === normalizeTag(pages[i].id)) {
+      return pages[i];
+    }
+  }
+
+  return null;
+};
+
+const findProjectByTag = function (tag) {
+
+  const normalized = normalizeTag(tag);
+
+  for (let i = 0; i < detailContents.length; i++) {
+    if (normalized === normalizeTag(detailContents[i].id) || normalized === normalizeTag(detailContents[i].dataset.detail)) {
+      return detailContents[i].dataset.detail;
+    }
+  }
+
+  return null;
+};
+
+const showPage = function (page) {
+
+  for (let i = 0; i < pages.length; i++) {
+    pages[i].classList.toggle("active", pages[i] === page);
+  }
+
+  for (let i = 0; i < navigationLinks.length; i++) {
+    navigationLinks[i].classList.toggle("active", normalizeTag(navigationLinks[i].textContent) === normalizeTag(page.dataset.page));
+  }
+
+  window.scrollTo(0, 0);
+};
+
+// render the view that matches the current hash
+const applyHash = function () {
+
+  const tag = location.hash.slice(1);
+  const project = tag ? findProjectByTag(tag) : null;
+
+  if (project) {
+    showPage(findPageByTag("portfolio"));
+    showProjectDetails(project);
+    return;
+  }
+
+  hideProjectDetails();
+  showPage(findPageByTag(tag) || findPageByTag("about"));
+};
+
+// add event to all nav link, they update the hash which triggers applyHash
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
-
-    hideProjectDetails();
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
+    location.hash = this.textContent.trim();
   });
 }
+
+window.addEventListener("hashchange", applyHash);
+
+applyHash();
